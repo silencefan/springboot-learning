@@ -2,7 +2,10 @@ package com.felixfan.learn.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.felixfan.learn.entity.vo.User;
+import com.felixfan.learn.properties.UserProperty;
 import com.felixfan.learn.service.IUserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,12 +21,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
+    private Logger logger = LoggerFactory.getLogger(getClass());
+
     @Autowired
     private IUserService userService;
+
+    @Autowired
+    private UserProperty userProperty;
 
     @RequestMapping(value = "/user.find/{id}", method = RequestMethod.GET)
     public String findById(@PathVariable Integer id) {
         User user = userService.findById(id);
+        logger.info("test UserProperty author = {}", userProperty.getAuthor());
         return JSON.toJSONString(user);
     }
 }
