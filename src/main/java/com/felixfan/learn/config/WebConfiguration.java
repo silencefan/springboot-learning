@@ -1,4 +1,4 @@
-package com.felixfan.learn.configuration;
+package com.felixfan.learn.config;
 
 import com.felixfan.learn.filter.CustomFilter;
 import org.apache.catalina.filters.RemoteIpFilter;
