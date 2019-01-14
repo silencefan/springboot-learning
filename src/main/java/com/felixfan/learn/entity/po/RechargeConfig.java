@@ -7,14 +7,15 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * @Description: 充值配置表
+ * @Description: 充值配置表</br>
+ * proxy这个注释是为了解决hibernate延迟加载的问题
  * @author: felix.fan
  * @date: 2019/1/14 11:23
  * @version: 1.0
  */
 @Data
 @Entity
-@Table(name = "dsp_recharge_config")
+@Table(name = "recharge_config")
 @Proxy(lazy = false)
 public class RechargeConfig implements Serializable {
 
@@ -47,4 +48,14 @@ public class RechargeConfig implements Serializable {
      */
     @Column(name = "update_time")
     private Integer updateTime;
+
+    public RechargeConfig() {
+    }
+
+    public RechargeConfig(Integer rechargeAmount, Integer donationAmount, Integer createTime, Integer updateTime) {
+        this.rechargeAmount = rechargeAmount;
+        this.donationAmount = donationAmount;
+        this.createTime = createTime;
+        this.updateTime = updateTime;
+    }
 }
