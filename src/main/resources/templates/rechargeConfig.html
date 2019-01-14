@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>充值配置页面</title>
+</head>
+<body>
+    <h2>充值配置</h2>
+    <div>
+        <ul>
+            <li th:each="rechargeConfig:${rechargeConfigs}">
+                <span th:text="${rechargeConfig.id}"></span>--
+                <span th:text="${rechargeConfig.rechargeAmount}"></span>--
+                <span th:text="${rechargeConfig.donationAmount}"></span>--
+                <span th:text="${rechargeConfig.createTime}"></span>--
+                <span th:text="${rechargeConfig.updateTime}"></span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
