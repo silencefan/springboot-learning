@@ -23,6 +23,8 @@ spring:
       hibernate.hbm2ddl.auto: update
       hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
+  session:
+    store-type: redis #默认使用的就是redis
 server:
   port: 8080
 com:
