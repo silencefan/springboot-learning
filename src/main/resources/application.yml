@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: springboot-learning
+  datasource:
+    url: jdbc:mysql://192.168.100.101:3306/java?useUnicode=true&characterEncoding=UTF-8
+    username: java
+    password: java
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    database: 0
+    host: 192.168.100.101
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    timeout: 100ms
+  jpa:
+    properties:
+      hibernate.hbm2ddl.auto: update
+      hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+  session:
+    store-type: redis #默认使用的就是redis
+server:
+  port: 8080
+com:
+  learn:
+    author: felix.fan
+logging:
+  file: log/springboot-learning.log
+  level:
+    org.springframework.web: DEBUG
+    com.felixfan.learn: DEBUG
