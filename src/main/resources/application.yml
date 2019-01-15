@@ -1,3 +1,11 @@
+server:
+  port: 8080
+logging:
+  file: log/springboot-learning.log
+  level:
+    org.springframework.web: DEBUG
+    com.felixfan.learn: DEBUG
+com.learn.author: felix.fan
 spring:
   application:
     name: springboot-learning
@@ -25,13 +33,16 @@ spring:
     show-sql: true
   session:
     store-type: redis #默认使用的就是redis
-server:
-  port: 8080
-com:
-  learn:
-    author: felix.fan
-logging:
-  file: log/springboot-learning.log
-  level:
-    org.springframework.web: DEBUG
-    com.felixfan.learn: DEBUG
+mapper:
+  mappers: tk.mybatis.mapper.common.Mapper,tk.mybatis.mapper.common.IdsMapper
+  identity: MYSQL
+mybatis:
+  mapper-locations: classpath:com/felixfan/learn/mapper/*.xml
+  type-aliases-package: com.felixfan.learn.entity.po
+  configuration:
+    map-underscore-to-camel-case: true
+pagehelper:
+  offset-as-page-num: true
+  row-bounds-with-count: true
+  page-size-zero: true
+  helper-dialect: mysql
