@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.felixfan.learn.mapper.RechargeConfigMapper">
+  <resultMap id="BaseResultMap" type="com.felixfan.learn.entity.RechargeConfig">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="recharge_amount" jdbcType="INTEGER" property="rechargeAmount" />
+    <result column="donation_amount" jdbcType="INTEGER" property="donationAmount" />
+    <result column="create_time" jdbcType="INTEGER" property="createTime" />
+    <result column="update_time" jdbcType="INTEGER" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, recharge_amount, donation_amount, create_time, update_time
+  </sql>
+</mapper>
