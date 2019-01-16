@@ -4,6 +4,8 @@ import com.felixfan.learn.entity.po.RechargeConfig;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * @Description: TODO
  * @author: felix.fan
@@ -21,4 +23,11 @@ public interface RechargeConfigRepository extends JpaRepository<RechargeConfig, 
      */
     @Override
     RechargeConfig getOne(Integer id);
+
+    /**
+     * 查询所有充值记录
+     * @return
+     */
+    @Override
+    List<RechargeConfig> findAll();
 }
