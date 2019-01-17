@@ -115,4 +115,5 @@
             <url>http://ci.we.com/nexus/content/repositories/releases/</url>
         </repository>
     </distributionManagement>
+    <!-- 这里是company环境 -->
 </project>
