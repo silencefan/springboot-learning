@@ -1,14 +1,13 @@
 # 这里是company环境
-server:
-  port: 8080
+server.port: 8080
 logging:
   file: log/springboot-learning.log
   level:
     org.springframework.web: DEBUG
     com.felixfan.learn: DEBUG
 spring:
-  application:
-    name: springboot-learning
+  application.name: springboot-learning
+  output.ansi.enabled: always
   datasource:
     url: jdbc:mysql://192.168.100.101:3306/java?useUnicode=true&characterEncoding=UTF-8
     username: java
