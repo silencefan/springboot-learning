@@ -13,7 +13,11 @@ public class User {
 
     private Integer id;
 
-    private String name;
+    private String username;
 
-    private Character sex;
+    private String password;
+
+    private Integer sex;
+
+    private Integer age;
 }

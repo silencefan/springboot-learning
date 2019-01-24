@@ -6,7 +6,6 @@ logging:
   level:
     org.springframework.web: DEBUG
     com.felixfan.learn: DEBUG
-com.learn.author: felix.fan
 spring:
   application:
     name: springboot-learning
