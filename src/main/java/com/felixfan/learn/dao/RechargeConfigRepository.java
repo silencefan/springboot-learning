@@ -1,6 +1,7 @@
 package com.felixfan.learn.dao;
 
 import com.felixfan.learn.entity.po.RechargeConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

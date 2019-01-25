@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.test.context.junit4.SpringRunner;
 import tk.mybatis.spring.annotation.MapperScan;
 
@@ -22,6 +23,7 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @MapperScan("com.felixfan.learn.mapper")
 @SpringBootTest
+@EnableCaching
 public class RechargeConfigRepositoryTest {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
@@ -29,10 +31,15 @@ public class RechargeConfigRepositoryTest {
     @Autowired
     private RechargeConfigRepository rechargeConfigRepository;
 
+    @Autowired
+    private RechargeService rechargeService;
+
     @Test
     public void testFindById() {
-        RechargeConfig rechargeConfig = rechargeConfigRepository.getOne(2);
-        logger.info("rechargeConfig = {}", JSON.toJSONString(rechargeConfig));
+        for (int i = 0; i< 3; i ++) {
+            RechargeConfig rechargeConfig = rechargeService.getRechargeConfig();
+            logger.info("rechargeConfig = {}", JSON.toJSONString(rechargeConfig));
+        }
     }
 
     @Test
