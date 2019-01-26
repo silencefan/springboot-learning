@@ -2,6 +2,8 @@ package com.felixfan.learn;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  * @Description: 服务启动类
@@ -10,6 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version: 1.0
  */
 @SpringBootApplication
+@MapperScan("com.felixfan.learn.mapper")
+@EnableSwagger2
 public class ServerBootApplication {
 
     public static void main(String[] args) {

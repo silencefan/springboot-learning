@@ -32,6 +32,9 @@ spring:
     show-sql: true
   session:
     store-type: redis #默认使用的就是redis
+  swagger:
+    base-package: com.felixfan.learn
+    enabled: true
 mapper:
   mappers: tk.mybatis.mapper.common.Mapper,tk.mybatis.mapper.common.IdsMapper
   identity: MYSQL
