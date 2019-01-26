@@ -19,3 +19,6 @@ Thymeleaf是一个Java模板引擎开发库，可以处理和生成HTML、XML、
 
 ### springboot整合tk.mybatis
 还是用tk.mybaits顺手一点...
+
+### springboot整合swagger2
+api文档

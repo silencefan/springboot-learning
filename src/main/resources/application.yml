@@ -6,10 +6,9 @@ logging:
   level:
     org.springframework.web: DEBUG
     com.felixfan.learn: DEBUG
-com.learn.author: felix.fan
 spring:
-  application:
-    name: springboot-learning
+  application.name: springboot-learning
+  output.ansi.enabled: always
   datasource:
     url: jdbc:mysql://192.168.1.101:3306/java?useUnicode=true&characterEncoding=UTF-8
     username: root
@@ -34,6 +33,9 @@ spring:
     show-sql: true
   session:
     store-type: redis #默认使用的就是redis
+  swagger:
+    base-package: com.felixfan.learn
+    enabled: true
 mapper:
   mappers: tk.mybatis.mapper.common.Mapper,tk.mybatis.mapper.common.IdsMapper
   identity: MYSQL

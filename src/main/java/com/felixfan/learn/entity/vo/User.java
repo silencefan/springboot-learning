@@ -1,5 +1,7 @@
 package com.felixfan.learn.entity.vo;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
@@ -9,11 +11,20 @@ import lombok.Data;
  * @version: 1.0
  */
 @Data
+@ApiModel
 public class User {
 
     private Integer id;
 
-    private String name;
+    @ApiModelProperty("用户名")
+    private String username;
 
-    private Character sex;
+    @ApiModelProperty("密码")
+    private String password;
+
+    @ApiModelProperty("性别")
+    private Integer sex;
+
+    @ApiModelProperty("年龄")
+    private Integer age;
 }
