@@ -22,3 +22,6 @@ Thymeleaf是一个Java模板引擎开发库，可以处理和生成HTML、XML、
 
 ### springboot整合swagger2
 api文档
+
+### springboot整合rabbitmq
+RabbitMQ是一个遵循AMQP协议，由面向高并发的erlang语言开发而成，用在实时的对可靠性要求比较高的消息传递上，支持多种语言客户端

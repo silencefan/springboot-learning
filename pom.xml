@@ -101,6 +101,12 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.9.2</version>
         </dependency>
+
+        <!-- springboot整合rabbitmq -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -122,18 +128,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>nexus distribution snapshot repository</name>
-            <url>http://ci.we.com/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>nexus-releases</id>
-            <name>Internal Releases</name>
-            <url>http://ci.we.com/nexus/content/repositories/releases/</url>
-        </repository>
-    </distributionManagement>
-    <!-- 这里是company环境 -->
+    <!-- 这里是home环境 -->
 </project>
