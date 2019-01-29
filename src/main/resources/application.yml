@@ -1,4 +1,4 @@
-# 这里是home环境
+# 这里是company环境
 server:
   port: 8080
 logging:
@@ -10,13 +10,13 @@ spring:
   application.name: springboot-learning
   output.ansi.enabled: always
   datasource:
-    url: jdbc:mysql://192.168.1.101:3306/java?useUnicode=true&characterEncoding=UTF-8
-    username: root
-    password: 123456
+    url: jdbc:mysql://192.168.100.101:3306/java?useUnicode=true&characterEncoding=UTF-8
+    username: java
+    password: java
     driver-class-name: com.mysql.jdbc.Driver
   redis:
     database: 0
-    host: 192.168.1.101
+    host: 192.168.100.101
     port: 6379
     password:
     jedis:
@@ -39,7 +39,7 @@ spring:
   rabbitmq:
     username: root
     password: root
-    host: 192.168.1.102
+    host: 192.168.100.101
     port: 5672
     virtual-host: /
     listener:
