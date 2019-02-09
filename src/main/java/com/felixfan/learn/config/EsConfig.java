@@ -17,7 +17,6 @@ import java.net.UnknownHostException;
  * @date: 2019/1/29 16:46
  */
 @Slf4j
-@Configuration
 public class EsConfig {
 
     @Bean(name = "transportClient")

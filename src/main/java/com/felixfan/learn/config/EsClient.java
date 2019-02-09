@@ -19,7 +19,6 @@ import org.springframework.context.annotation.Configuration;
  * @date: 2019/1/29 17:07
  */
 @Slf4j
-@Configuration
 public class EsClient {
 
     @Autowired

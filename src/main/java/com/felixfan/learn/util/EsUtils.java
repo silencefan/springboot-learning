@@ -56,7 +56,6 @@ import static org.elasticsearch.index.query.QueryBuilders.matchAllQuery;
  * @date: 2019/1/29 17:20
  */
 @Slf4j
-@Component
 public class EsUtils {
 
     @Autowired
