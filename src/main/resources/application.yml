@@ -4,8 +4,10 @@ server:
 logging:
   file: log/springboot-learning.log
   level:
-    org.springframework.web: DEBUG
-    com.felixfan.learn: DEBUG
+    org.apache: WARN
+    org.springframework: WARN
+    com.felixfan.learn.filter: WARN
+    com.felixfan.learn.controller: INFO
 spring:
   application.name: springboot-learning
   output.ansi.enabled: always
