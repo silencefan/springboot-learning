@@ -11,11 +11,31 @@ logging:
 spring:
   application.name: springboot-learning
   output.ansi.enabled: always
+#  datasource:
+#    url: jdbc:mysql://192.168.0.201:3306/java?useUnicode=true&characterEncoding=UTF-8
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.jdbc.Driver
   datasource:
-    url: jdbc:mysql://192.168.0.201:3306/java?useUnicode=true&characterEncoding=UTF-8
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
+    master:
+      username: root
+      password: 123456
+      url: jdbc:mysql://192.168.0.201:3306/master?useUnicode=true&characterEncoding=UTF-8
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+    cluster:
+      - key: slave1
+        username: root
+        password: 123456
+        url: jdbc:mysql://192.168.0.201:3306/slave1?useUnicode=true&characterEncoding=UTF-8
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+      - key: slave2
+        username: root
+        password: 123456
+        url: jdbc:mysql://192.168.0.201:3306/slave2?useUnicode=true&characterEncoding=UTF-8
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
   redis:
     database: 0
     host: 192.168.0.201

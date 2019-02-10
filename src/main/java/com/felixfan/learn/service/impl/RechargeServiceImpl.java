@@ -14,7 +14,6 @@ import java.util.List;
  * @Date 2019/1/15 23:50
  * @Version 1.0
  */
-@Service
 public class RechargeServiceImpl implements IRechargeService {
 
     @Autowired

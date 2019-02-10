@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
  * @author: felix.fan
  * @date: 2019/1/24 20:40
  */
-@Component
 public class RechargeService implements IRechargeService {
 
     @Autowired

@@ -1,7 +1,7 @@
 package com.felixfan.learn.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.felixfan.learn.entity.vo.User;
+import com.felixfan.learn.entity.po.User;
 import com.felixfan.learn.service.IUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -32,7 +32,7 @@ public class UserController {
     @ApiOperation(value = "根据id查询")
     @ApiImplicitParam(name = "id", value = "id", required = true, dataType = "Integer", paramType = "path")
     public String findById(@PathVariable(value = "id") Integer id) {
-        User user = userService.findById(id);
+        User user = userService.selectById(id);
         logger.info("test UserProperty author = {}", user.getUsername());
         return JSON.toJSONString(user);
     }
