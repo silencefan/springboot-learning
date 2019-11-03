@@ -11,34 +11,34 @@ logging:
 spring:
   application.name: springboot-learning
   output.ansi.enabled: always
-#  datasource:
-#    url: jdbc:mysql://192.168.0.201:3306/java?useUnicode=true&characterEncoding=UTF-8
-#    username: root
-#    password: 123456
-#    driver-class-name: com.mysql.jdbc.Driver
   datasource:
-    master:
-      username: root
-      password: 123456
-      url: jdbc:mysql://192.168.0.201:3306/master?useUnicode=true&characterEncoding=UTF-8
-      driver-class-name: com.mysql.jdbc.Driver
-      type: com.zaxxer.hikari.HikariDataSource
-    cluster:
-      - key: slave1
-        username: root
-        password: 123456
-        url: jdbc:mysql://192.168.0.201:3306/slave1?useUnicode=true&characterEncoding=UTF-8
-        driver-class-name: com.mysql.jdbc.Driver
-        type: com.zaxxer.hikari.HikariDataSource
-      - key: slave2
-        username: root
-        password: 123456
-        url: jdbc:mysql://192.168.0.201:3306/slave2?useUnicode=true&characterEncoding=UTF-8
-        driver-class-name: com.mysql.jdbc.Driver
-        type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://49.233.163.136:3306/test?useUnicode=true&characterEncoding=UTF-8
+    username: java
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#  datasource:
+#    master:
+#      username: root
+#      password: 123456
+#      url: jdbc:mysql://192.168.0.201:3306/master?useUnicode=true&characterEncoding=UTF-8
+#      driver-class-name: com.mysql.jdbc.Driver
+#      type: com.zaxxer.hikari.HikariDataSource
+#    cluster:
+#      - key: slave1
+#        username: root
+#        password: 123456
+#        url: jdbc:mysql://192.168.0.201:3306/slave1?useUnicode=true&characterEncoding=UTF-8
+#        driver-class-name: com.mysql.jdbc.Driver
+#        type: com.zaxxer.hikari.HikariDataSource
+#      - key: slave2
+#        username: root
+#        password: 123456
+#        url: jdbc:mysql://192.168.0.201:3306/slave2?useUnicode=true&characterEncoding=UTF-8
+#        driver-class-name: com.mysql.jdbc.Driver
+#        type: com.zaxxer.hikari.HikariDataSource
   redis:
     database: 0
-    host: 192.168.0.201
+    host: 49.233.163.136
     port: 6379
     password:
     jedis:
@@ -58,15 +58,27 @@ spring:
   swagger:
     base-package: com.felixfan.learn
     enabled: true
-  rabbitmq:
-    username: admin
-    password: 123456
-    host: 192.168.0.201
-    port: 5672
-    virtual-host: /
-    listener:
-      simple:
-        acknowledge-mode: manual
+  mail:
+    host: smtp.qq.com
+    username: 1032347893@qq.com
+    password:  #QQ邮箱的授权码
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    default-encoding: UTF-8
+#  rabbitmq:
+#    username: admin
+#    password: 123456
+#    host: 192.168.0.201
+#    port: 5672
+#    virtual-host: /
+#    listener:
+#      simple:
+#        acknowledge-mode: manual
 mapper:
   mappers: tk.mybatis.mapper.common.Mapper,tk.mybatis.mapper.common.IdsMapper
   identity: MYSQL
