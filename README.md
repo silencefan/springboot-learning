@@ -29,9 +29,9 @@ RabbitMQ是一个遵循AMQP协议，由面向高并发的erlang语言开发而�
 ### springboot整合quartz
 定时任务调度框架
 
-###springboot整合email
-#####使用JavaMailSender发送邮件 http://blog.didispace.com/springbootmailsender/
-#####SpringBoot 2.x 集成QQ邮箱、网易系邮箱、Gmail邮箱发送邮件 https://my.oschina.net/zyw205/blog/1918222
+### springboot整合email
+##### 使用JavaMailSender发送邮件 http://blog.didispace.com/springbootmailsender/
+##### SpringBoot 2.x 集成QQ邮箱、网易系邮箱、Gmail邮箱发送邮件 https://my.oschina.net/zyw205/blog/1918222
 
-###springboot整合WebSocket打造聊天室
-#####参考资料： https://blog.battcn.com/2018/06/27/springboot/v2-other-websocket/
+### springboot整合WebSocket打造聊天室
+##### 参考资料： https://blog.battcn.com/2018/06/27/springboot/v2-other-websocket/
